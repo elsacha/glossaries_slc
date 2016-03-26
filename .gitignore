@@ -20,4 +20,3 @@ npm-debug.log
 server/boot/init.js
 server/datasources.json
 data
-views/login.html
