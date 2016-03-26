@@ -37,6 +37,16 @@ app.config(function ($routeProvider) {
         controller: 'EngRusController'
     })
     
+//    .when('/signup', {
+//        templateUrl: 'views/signup.html',
+//        controller: 'AuthCtrl',
+//        controllerAs: 'auth'
+//      })
+    .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
+    })
+    
 });
 
 //var app = angular.module('app', ['lbServices', 'ui.router']);

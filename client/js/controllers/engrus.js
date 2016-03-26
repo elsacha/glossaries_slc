@@ -16,8 +16,7 @@ angular
 //          $scope.engrus = results;
 //        });
 //    }
-//    getEngRus();
-      
+//    getEngRus();    
 $http.
     get('/api/EngRus/?filter={"where": { "eng": "'+ $scope.sourceTerm + '" } }').
     success(function(data) {
