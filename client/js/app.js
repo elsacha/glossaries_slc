@@ -37,11 +37,11 @@ app.config(function ($routeProvider) {
         controller: 'EngRusController'
     })
     
-//    .when('/signup', {
-//        templateUrl: 'views/signup.html',
-//        controller: 'AuthCtrl',
-//        controllerAs: 'auth'
-//      })
+    .when('/signup', {
+        templateUrl: 'views/signup.html',
+        controller: 'SignUpController',
+        controllerAs: 'auth'
+      })
     .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
