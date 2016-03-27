@@ -9,7 +9,8 @@ angular
     $scope.loginResult = Contributor.login({"username": $scope.user.name, "password": $scope.user.password},
       function(user) {
         // success
-        console.log("success login" + user.id);
+        //console.log("success login" + user.id);
+        console.log("success login");
       }, function(res) {
         // error
         console.log("error login");
