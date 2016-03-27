@@ -1,9 +1,9 @@
 angular
   .module('app')
-  .factory('AuthService', ['Reviewer', '$q', '$rootScope', function(User, $q,
+  .factory('AuthService', ['Contributor', '$q', '$rootScope', function(Contributor, $q,
       $rootScope) {
     function login(email, password) {
-      return User
+      return Contributor
         .login({email: email, password: password})
         .$promise
         .then(function(response) {
@@ -16,20 +16,20 @@ angular
     }
 
     function logout() {
-      return User
+      return Contributor
        .logout()
-       .$promise
-       .then(function() {
-         $rootScope.currentUser = null;
-       });
+//       .$promise
+//       .then(function() {
+//         $rootScope.currentUser = null;
+//       });
     }
 
-    function register(email, username, password) {
-      return User
+    function register(username, password, email) {
+      return Contributor
         .create({
-         email: email,
          username: username,
-         password: password
+         password: password,
+         email: email
        })
        .$promise;
     }

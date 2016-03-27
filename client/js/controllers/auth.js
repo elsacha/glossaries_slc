@@ -20,11 +20,27 @@ angular
  .controller('SignUpController', 
       function($scope, Contributor, AuthService, $location) {
     $scope.register = function() {
-      AuthService.register($scope.user.email, $scope.user.email, $scope.user.password)
+      AuthService.register($scope.user.name, $scope.user.password, $scope.user.email)
         .then(function() {
           //$state.transitionTo('sign-up-success'); //try to do with states
           console.log("user registered");
         });
     };
-  });
+  })
  
+.controller('AuthLogoutController', 
+      function($scope, Contributor, $location) {
+    $scope.logout = function() {
+        console.log("attempting logout");
+        $scope.logoutResult = Contributor.logout(
+        
+//        function() {
+//        // success
+//        console.log("user logged out");
+//        }, function() {
+//        // error
+//        console.log("error logout");
+//      }
+        );
+    }
+});
